@@ -1,16 +1,27 @@
+// Navigation handling
 function showPage(pageId) {
     // Hide all pages
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
     
+    // Remove active class from all nav buttons
+    const navBtns = document.querySelectorAll('.nav-btn');
+    navBtns.forEach(btn => btn.classList.remove('active'));
+    
     // Show selected page
     const selectedPage = document.getElementById(pageId);
     if (selectedPage) {
         selectedPage.classList.add('active');
+        // Add active class to corresponding nav button
+        const activeBtn = document.querySelector(`.nav-btn[data-page="${pageId}"]`);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+        }
         window.scrollTo(0, 0);
     }
 }
 
+// Form handlers
 function handleSubmit(event) {
     event.preventDefault();
     alert('Thank you for your message! We will get back to you soon.');
@@ -67,5 +78,50 @@ function initializeCountdowns() {
     }
 }
 
-// Initialize countdowns when the page loads
-document.addEventListener('DOMContentLoaded', initializeCountdowns);
+// Mobile navigation toggle
+function toggleMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+// Gallery modal functionality
+function openModal(index) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    
+    if (galleryItems[index]) {
+        modal.style.display = 'block';
+        modalImg.src = galleryItems[index].src;
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside the image
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCountdowns();
+    
+    // Add mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMobileMenu);
+    }
+    
+    // Close mobile menu when clicking on nav links
+    const navLinks = document.querySelectorAll('.nav-btn');
+    navLinks.forEach(link => {
+        link.addEventListener('click', toggleMobileMenu);
+    });
+});
