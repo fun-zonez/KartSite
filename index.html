@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedRush - Go-Kart Racing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><button onclick="showPage('home')">HOME</button></li>
+            <li><button onclick="showPage('about')">ABOUT</button></li>
+            <li><button onclick="showPage('events')">EVENTS</button></li>
+            <li><button onclick="showPage('gallery')">GALLERY</button></li>
+            <li><button onclick="showPage('contact')">CONTACT</button></li>
+            <li><button onclick="showPage('register')">REGISTER</button></li>
+        </ul>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>BRAHMASTRA - Engineering Speed, Building Passion</h1>
+                <p class="subheading">Welcome to Brahmastra Go-Kart Club of Government College of Engineering, Srirangam — a student-driven initiative from the Department of Mechanical Engineering. Where innovation meets speed, and passion drives performance.</p>
+                <div class="hero-icons">⚡ Power <span class="sep">|</span> 🏁 Speed <span class="sep">|</span> 🧠 Precision <span class="sep">|</span> 🔥 Excellence</div>
+                <div class="hero-cta">
+                    <button class="cta-button primary" onclick="showPage('register')">Join Brahmastra</button>
+                    <button class="cta-button" onclick="showPage('about')">Know More</button>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">🏎️</div>
+        </header>
+        
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Currently Building</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2025</div>
+                <div class="stat-label">Founded</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 SpeedRush Go-Kart Racing. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <section class="about">
+            <h2>About Brahmastra</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Brahmastra is a team of passionate mechanical engineers dedicated to designing, fabricating, and testing high-performance go-karts. Our mission is to blend theory with hands-on learning, pushing the boundaries of mechanical design and motorsport engineering.</p>
+                    <p>Founded by enthusiastic students from the Department of Mechanical Engineering at Government College of Engineering, Srirangam, Brahmastra serves as a hub for innovation, teamwork, and practical application of engineering principles.</p>
+
+                    <h3>Focus Areas</h3>
+                    <ul class="focus-list">
+                        <li><strong>Design & Fabrication</strong> – Advanced CAD modeling and precision manufacturing</li>
+                        <li><strong>Mechanical Innovation</strong> – Research and development of cutting-edge technologies</li>
+                        <li><strong>Racing Competitions</strong> – Participation in national-level go-kart championships</li>
+                        <li><strong>Skill Development</strong> – Workshops, training, and collaborative learning</li>
+                    </ul>
+                </div>
+
+                <div class="about-img" aria-hidden="true">🏁</div>
+            </div>
+
+            <div class="tech-stack">
+                <h3>Our Technology Stack</h3>
+                <ul class="tech-list">
+                    <li><strong>SolidWorks</strong> – Used for frame design and 3D modeling of go-kart components</li>
+                    <li><strong>ANSYS</strong> – For structural analysis and simulation of designs</li>
+                    <li><strong>CAD/CAM</strong> – Computer-aided design and manufacturing tools</li>
+                    <li><strong>Simulation</strong> – Advanced simulation and testing of prototypes</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 SpeedRush Go-Kart Racing. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- EVENTS PAGE -->
+    <div id="events" class="page">
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div class="event-grid">
+                <div class="event-card">
+                    <h3>Championship Series</h3>
+                    <p><strong>Date:</strong> Oct 23, 2025</p>
+                    <p><strong>Time:</strong> 3:00 PM - 6:00 PM</p>
+                    <p><strong>Location:</strong> HOD Room</p>
+                    <p>Battle for glory in our exclusive championship race. Winners receive trophies and prizes!</p>
+                    <p style="margin-top: 1rem; color: #ff3333;"><strong>Entry Fee: $50</strong></p>
+                    <div class="countdown-container">
+                        <div class="countdown" id="countdown-1">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days-1">00</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours-1">00</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes-1">00</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="seconds-1">00</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 SpeedRush Go-Kart Racing. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="gallery" class="page">
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">🏎️</div>
+                <div class="gallery-item">🏁</div>
+                <div class="gallery-item">🏆</div>
+                <div class="gallery-item">⚡</div>
+                <div class="gallery-item">🔥</div>
+                <div class="gallery-item">💨</div>
+                <div class="gallery-item">🎯</div>
+                <div class="gallery-item">🚦</div>
+                <div class="gallery-item">⚙️</div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 SpeedRush Go-Kart Racing. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Address:</h3>
+                        <p>Government College of Engineering - Srirangam , Trichy - Madurai Highway Sethurappatti Road ,Trichy - 620012</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Phone:</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📧 Email:</h3>
+                        <p>kavi@gladwinroom.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕐 Hours:</h3>
+                        <p>Mon-Fri: 2PM-10PM<br>Sat-Sun: 10AM-11PM</p>
+                    </div>
+
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 SpeedRush Go-Kart Racing. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- REGISTER PAGE -->
+    <div id="register" class="page">
+        <section class="register">
+            <h2>Register for Club</h2>
+            <form class="register-form" onsubmit="handleRegistration(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Select Year</option>
+                    <option value="year1">First Year</option>
+                    <option value="year2">Second Year</option>
+                    <option value="year3">Third Year</option>
+                    <option value="year4">Fourth Year</option>
+                </select>
+                <!-- <input type="number" placeholder="Age" required> -->
+                <button type="submit" class="cta-button">Complete Registration</button>
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2025 SpeedRush Go-Kart Racing. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
