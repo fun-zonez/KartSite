@@ -1398,7 +1398,32 @@ footer {
     gap: 20px;
     padding: 10px 0;
 }
+/* --- Event Status Tags --- */
+.event-status {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px; /* Pill shape */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    text-align: center;
+    border: 1px solid; /* Base border */
+}
 
+.status-upcoming {
+    color: #dd8f1b; /* Your main accent red */
+    border-color: #ffb83394;
+    background-color: rgba(255, 51, 51, 0.1); /* Subtle red glow */
+}
+
+.status-completed {
+    color: #1d831d; /* Muted gray text */
+    border-color: #10972263;
+    background-color: rgba(85, 85, 85, 0.1); /* Subtle gray fill */
+}
 .folder-image {
     border-radius: 8px;
     overflow: hidden;
